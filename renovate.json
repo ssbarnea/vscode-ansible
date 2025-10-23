@@ -18,7 +18,10 @@
     "enabled": true,
     "groupName": "actions dependencies",
     "groupSlug": "actions",
-    "labels": ["chore", "dependencies"],
+    "labels": [
+      "chore",
+      "dependencies"
+    ],
     "packageRules": [
       {
         "matchPackageNames": [
@@ -30,7 +33,10 @@
       }
     ]
   },
-  "labels": ["chore", "dependencies"],
+  "labels": [
+    "chore",
+    "dependencies"
+  ],
   "lockFileMaintenance": {
     "commitMessageAction": "update",
     "enabled": true,
@@ -45,19 +51,37 @@
     {
       "groupName": "all devDependencies",
       "groupSlug": "npm-dev",
-      "matchDepTypes": ["devDependencies"],
-      "matchManagers": ["npm"],
-      "updateTypes": ["minor", "patch", "major"]
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "matchManagers": [
+        "npm"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "major"
+      ]
     },
     {
       "groupName": "npm runtime dependencies",
       "groupSlug": "npm",
-      "matchDepTypes": ["dependencies"],
-      "matchManagers": ["npm"],
-      "updateTypes": ["minor", "patch", "major"]
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchManagers": [
+        "npm"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "major"
+      ]
     },
     {
-      "matchPackageNames": ["*"],
+      "matchPackageNames": [
+        "*"
+      ],
       "minimumReleaseAge": "2 days"
     }
   ],
@@ -77,7 +101,10 @@
   },
   "rangeStrategy": "replace",
   "recreateWhen": "always",
-  "schedule": ["at any time", "before 4am on monday"],
+  "schedule": [
+    "at any time",
+    "before 4am on monday"
+  ],
   "separateMajorMinor": false,
   "separateMinorPatch": false,
   "timezone": "UTC"
