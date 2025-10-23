@@ -1465,6 +1465,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@primeuix/styled@npm:^0.7.4":
+  version: 0.7.4
+  resolution: "@primeuix/styled@npm:0.7.4"
+  dependencies:
+    "@primeuix/utils": "npm:^0.6.1"
+  checksum: 10/55925b693b5bebcada94acb08d079583faa84537148a439fe6ce3c4f2358c94f2ff4a11086be81f9b208c6752a40743834e644f3283eec92705c88a43ab6f3fe
+  languageName: node
+  linkType: hard
+
 "@primeuix/styles@npm:^1.2.5":
   version: 1.2.5
   resolution: "@primeuix/styles@npm:1.2.5"
@@ -1490,25 +1499,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@primevue/core@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@primevue/core@npm:4.4.0"
+"@primevue/core@npm:4.4.1":
+  version: 4.4.1
+  resolution: "@primevue/core@npm:4.4.1"
   dependencies:
-    "@primeuix/styled": "npm:^0.7.3"
+    "@primeuix/styled": "npm:^0.7.4"
     "@primeuix/utils": "npm:^0.6.1"
   peerDependencies:
     vue: ^3.5.0
-  checksum: 10/14f878c60ad8ae7490571a1b591b3856d74578a17183b3e1b64eac6ba129566da97a5583bfc8b682728b6427d8469133de81b179f70c0f6eaf5112ce4df15564
+  checksum: 10/1488158a8e4837f89db1231c50941162949c32655b86218f5a83c62e640e4a9a7a5647d530818fd81b1c96380ab78f4a52bac9beb8f9e1643100ebf24541f033
   languageName: node
   linkType: hard
 
-"@primevue/icons@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@primevue/icons@npm:4.4.0"
+"@primevue/icons@npm:4.4.1":
+  version: 4.4.1
+  resolution: "@primevue/icons@npm:4.4.1"
   dependencies:
     "@primeuix/utils": "npm:^0.6.1"
-    "@primevue/core": "npm:4.4.0"
-  checksum: 10/523a1edcc0bf7747d7437e2b4d192c180b0dc2d0da2f177d8d80a9aaa64d4c77d40b7424a8b91d9a8fd25127295505a94c079c86836022f450f758dd058c36d5
+    "@primevue/core": "npm:4.4.1"
+  checksum: 10/15b238bb6877165912638857aefffba33b16d9f25e3fdbb42a69602f06ce13c5bbdf8cea935866cff17f77365ca9b8b2883178360f2880b1817528949f920676
   languageName: node
   linkType: hard
 
@@ -3905,7 +3914,7 @@ __metadata:
     npm-check-updates: "npm:^19.0.0"
     ovsx: "npm:^0.10.5"
     prettier: "npm:^3.6.2"
-    primevue: "npm:4.4.0"
+    primevue: "npm:4.4.1"
     react: "npm:^19.1.0"
     rimraf: "npm:^6.0.1"
     selenium-webdriver: "npm:^4.36.0"
@@ -9326,16 +9335,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"primevue@npm:4.4.0":
-  version: 4.4.0
-  resolution: "primevue@npm:4.4.0"
+"primevue@npm:4.4.1":
+  version: 4.4.1
+  resolution: "primevue@npm:4.4.1"
   dependencies:
-    "@primeuix/styled": "npm:^0.7.3"
+    "@primeuix/styled": "npm:^0.7.4"
     "@primeuix/styles": "npm:^1.2.5"
     "@primeuix/utils": "npm:^0.6.1"
-    "@primevue/core": "npm:4.4.0"
-    "@primevue/icons": "npm:4.4.0"
-  checksum: 10/1793608cf18358387db06aab68421f49acb3f8fb6f6143173ec50c966a68094500f60fdb502d92e68d57c2ddff8f4666ef151277474f51638c54462ea0b1107d
+    "@primevue/core": "npm:4.4.1"
+    "@primevue/icons": "npm:4.4.1"
+  checksum: 10/4d57e24a5ae68f2c4568779653e564c4d02761d2981f2e834c55148b629c6b9d6f446b3d13e3f82792940e6062f6211359dabff7de9a4d9c260a28d93d8f3cd9
   languageName: node
   linkType: hard
 
