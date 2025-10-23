@@ -11,11 +11,10 @@
   "extends": [
     "config:recommended",
     ":semanticCommitTypeAll(chore)",
-    ":enablePreCommit",
     "schedule:automergeEarlyMondays"
   ],
   "github-actions": {
-    "branchTopic": "actions",
+    "branchTopic": "build",
     "enabled": true,
     "groupName": "actions dependencies",
     "groupSlug": "actions",
@@ -44,27 +43,50 @@
   "minimumReleaseAge": "1 days",
   "packageRules": [
     {
-      "branchTopic": "all",
-      "groupName": "all dependencies",
-      "groupSlug": "all",
+      "groupSlug": "npm-dev",
+      "matchDepTypes": ["devDependencies"],
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": ["minor", "patch", "major"]
+    },
+    {
+      "matchDepTypes": ["dependencies"],
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": ["minor", "patch", "major"]
+    },
+    {
       "matchPackageNames": ["*"],
       "minimumReleaseAge": "2 days"
+    },
+    {
+      "description": "Disable updates to requires-python field",
+      "enabled": false,
+      "matchManagers": ["pep621"],
+      "matchDepTypes": ["requires-python"]
+    },
+    {
+      "description": "Disable updates to .python_version file",
+      "enabled": false,
+      "matchFileNames": [".python_version"]
+    },
+    {
+      "description": "Disable updates to Python version in mise config",
+      "enabled": false,
+      "matchManagers": ["mise"],
+      "matchPackageNames": ["python"]
     }
   ],
   "pin": {
-    "branchTopic": "all",
-    "groupName": "all dependencies",
-    "groupSlug": "all"
+    "groupName": "all dependencies"
   },
   "pinDigest": {
-    "branchTopic": "all",
-    "groupName": "all dependencies",
-    "groupSlug": "all"
+    "groupName": "all dependencies"
   },
   "prConcurrentLimit": 5,
+  "pre-commit": {
+    "branchTopic": "build"
+  },
   "rangeStrategy": "replace",
   "recreateWhen": "always",
-  "schedule": ["before 4am on monday"],
   "separateMajorMinor": false,
   "separateMinorPatch": false,
   "timezone": "UTC"
