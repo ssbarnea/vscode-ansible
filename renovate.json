@@ -1,8 +1,20 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>ansible/actions//config/renovate.json"],
+  "automerge": true,
+  "automergeStrategy": "squash",
+  "commitMessageAction": "update",
+  "commitMessageExtra": "",
+  "commitMessageTopic": "dependencies",
+  "configMigration": true,
+  "dependencyDashboard": true,
+  "dependencyDashboardAutoclose": true,
+  "extends": [
+    "config:recommended",
+    ":semanticCommitTypeAll(chore)",
+    ":enablePreCommit"
+  ],
   "github-actions": {
-    "branchTopic": "actions",
+    "branchTopic": "build",
     "enabled": true,
     "groupName": "actions dependencies",
     "groupSlug": "actions",
@@ -18,6 +30,7 @@
       }
     ]
   },
+  "labels": ["chore", "dependencies"],
   "lockFileMaintenance": {
     "commitMessageAction": "update",
     "enabled": true,
@@ -28,5 +41,44 @@
     "recreateWhen": "always"
   },
   "minimumReleaseAge": "1 days",
-  "prConcurrentLimit": 5
+  "packageRules": [
+    {
+      "groupName": "all devDependencies",
+      "groupSlug": "npm-dev",
+      "matchDepTypes": ["devDependencies"],
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": ["minor", "patch", "major"]
+    },
+    {
+      "groupName": "npm runtime dependencies",
+      "groupSlug": "npm",
+      "matchDepTypes": ["dependencies"],
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": ["minor", "patch", "major"]
+    },
+    {
+      "matchPackageNames": ["*"],
+      "minimumReleaseAge": "2 days"
+    }
+  ],
+  "pin": {
+    "branchTopic": "pin",
+    "groupName": "all dependencies",
+    "groupSlug": "pin"
+  },
+  "pinDigest": {
+    "branchTopic": "pin-digest",
+    "groupName": "all dependencies",
+    "groupSlug": "pin-digest"
+  },
+  "prConcurrentLimit": 5,
+  "pre-commit": {
+    "branchTopic": "build"
+  },
+  "rangeStrategy": "replace",
+  "recreateWhen": "always",
+  "schedule": ["at any time", "before 4am on monday"],
+  "separateMajorMinor": false,
+  "separateMinorPatch": false,
+  "timezone": "UTC"
 }
