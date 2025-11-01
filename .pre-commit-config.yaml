@@ -19,21 +19,21 @@ exclude: >
 minimum_pre_commit_version: 4.0.0 # Related to https://github.com/ekalinin/nodeenv/issues/369
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: "v0.13.3"
+    rev: "v0.14.2"
     hooks:
       - id: ruff-format
         alias: ruff
       - id: ruff-check
         alias: ruff
   - repo: https://github.com/biomejs/pre-commit
-    rev: "v2.2.5"
+    rev: "v2.3.2"
     hooks:
       - id: biome-check
         name: biome
         alias: biome
         args: [--unsafe]
   - repo: https://github.com/streetsidesoftware/cspell-cli
-    rev: v9.2.0
+    rev: v9.2.1
     hooks:
       - id: cspell
         entry: bash
@@ -165,7 +165,7 @@ repos:
             packages/ansible-language-server/test/fixtures/diagnostics/invalid_yaml.yml
           )$
   - repo: https://github.com/tombi-toml/tombi-pre-commit
-    rev: v0.6.24
+    rev: v0.6.39
     hooks:
       - id: tombi-format
         alias: toml
